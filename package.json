@@ -16,6 +16,7 @@
     "@react-native-async-storage/async-storage": "1.15.9",
     "@react-native-community/datetimepicker": "3.5.2",
     "@react-native-community/slider": "4.1.8",
+    "@shopify/restyle": "1.4.0",
     "@storybook/addon-actions": "6.3.10",
     "@storybook/addon-controls": "6.3.10",
     "@storybook/addon-ondevice-actions": "6.0.1-alpha.3",
