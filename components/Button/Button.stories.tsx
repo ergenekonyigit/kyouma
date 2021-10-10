@@ -12,7 +12,7 @@ const ButtonMeta: ComponentMeta<typeof Button> = {
     onPress: { action: 'pressed the button' },
   },
   args: {
-    text: 'Hello world',
+    label: 'kyouma',
   },
 };
 
@@ -23,7 +23,9 @@ type ButtonStory = ComponentStory<typeof Button>;
 export const Basic: ButtonStory = args => (
   <ThemeProvider theme={theme}>
     <Box padding="m">
-      <Button {...args} />
+      <Button {...args} variant="buttonPrimary" />
+      <Box paddingVertical="xs" />
+      <Button {...args} variant="buttonSecondary" />
     </Box>
   </ThemeProvider>
 );

@@ -30,21 +30,40 @@ const theme = createTheme({
     xl: 20,
   },
   breakpoints: {},
+  cardVariants: {},
   textVariants: {
     body: {
       fontSize: 16,
       lineHeight: 24,
       color: 'black',
     },
-  },
-  cardVariants: {
-    primary: {
-      backgroundColor: 'primaryCardBackground',
-      shadowOpacity: 0.3,
+    buttonPrimary: {
+      fontSize: 16,
+      lineHeight: 24,
+      color: 'purpleDark',
+      fontWeight: 'bold',
+      textAlign: 'center',
     },
-    secondary: {
-      backgroundColor: 'secondaryCardBackground',
-      shadowOpacity: 0.1,
+    buttonSecondary: {
+      fontSize: 16,
+      lineHeight: 24,
+      color: 'greenLight',
+      fontWeight: 'bold',
+      textAlign: 'center',
+    },
+  },
+  buttonVariants: {
+    buttonPrimary: {
+      backgroundColor: 'greenLight',
+      borderRadius: 'l',
+      paddingVertical: 'xs',
+      paddingHorizontal: 'm',
+    },
+    buttonSecondary: {
+      backgroundColor: 'purpleDark',
+      borderRadius: 'l',
+      paddingVertical: 'xs',
+      paddingHorizontal: 'm',
     },
   },
 });

@@ -1,31 +1,31 @@
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
+import {
+  createRestyleComponent,
+  createVariant,
+  VariantProps,
+} from '@shopify/restyle';
+import { Theme } from '../../src/theme';
 import { Box } from '../Box/Box';
 import { Text } from '../Text/Text';
 
 type ButtonProps = {
   onPress: () => void;
-  text: string;
+  variant: string;
+  label: string;
 };
 
-export const Button = ({ onPress, text }: ButtonProps) => {
+const RestyleButton = createRestyleComponent<
+  VariantProps<Theme, 'buttonVariants'> & React.ComponentProps<typeof Box>,
+  Theme
+>([createVariant({ themeKey: 'buttonVariants' })], Box);
+
+export const Button = ({ onPress, variant, label }: ButtonProps) => {
   return (
-    <Box
-      backgroundColor="greenLight"
-      paddingVertical="xs"
-      paddingHorizontal="m"
-      borderRadius="l"
-    >
-      <TouchableOpacity onPress={onPress}>
-        <Text
-          variant="body"
-          color="purpleDark"
-          fontWeight="bold"
-          textAlign="center"
-        >
-          {text}
-        </Text>
-      </TouchableOpacity>
-    </Box>
+    <TouchableOpacity onPress={onPress}>
+      <RestyleButton variant={variant}>
+        <Text variant={variant}>{label}</Text>
+      </RestyleButton>
+    </TouchableOpacity>
   );
 };
